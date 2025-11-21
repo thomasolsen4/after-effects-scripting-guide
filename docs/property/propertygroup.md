@@ -129,6 +129,83 @@ Boolean.
 
 ---
 
+### PropertyGroup.addVariableFontAxis()
+
+`app.project.item(index).layer(index).propertyGroupSpec.addVariableFontAxis(axisTag)`
+
+!!! note
+    This functionality was added in After Effects (Beta) 26.0 and is subject to change while it remains in Beta.
+
+#### Description
+
+Creates and returns a Property object for a variable font axis, and adds it to this property group. This method can only be called on the "ADBE Text Animator Properties" property group within a text animator.
+
+Common axis tags include (but are not limited to):
+
+- `"wght"` - Weight (100-900 typical range)
+- `"wdth"` - Width (percentage of normal width)
+- `"slnt"` - Slant (angle in degrees)
+- `"ital"` - Italic (0-1 range)
+- `"opsz"` - Optical Size (point size)
+
+Fonts may also include custom axes with 4-character uppercase tags (e.g., `"INFM"` for Informality).
+
+#### Variable Font Spacing
+
+When animating Variable Font axes, individual characters can change width. The Variable Font Spacing property (found in the "More Options" section of a text animator) controls how After Effects handles character spacing compensation for these width changes.
+
+The Variable Font Spacing property can be accessed via its matchName `"ADBE Text Variable Font Spacing"` and is a dropdown control property. This property appears only when at least one variable font axis is active in the animator.
+
+
+!!! tip
+    Axes must exist on the font to have any impact. To discover what axes a font supports, use [FontObject.designAxesData](../text/fontobject.md#fontobjectdesignaxesdata).
+
+#### Parameters
+
+| Parameter |  Type  |                                              Description                                               
+| --------- | ------ | -----------------------------------------------------------------------------------------------------|
+| `axisTag` | String | The 4-character tag identifying the variable font axis (e.g., `"wght"`, `"wdth"`, `"slnt"`, `"ital"`).
+
+#### Returns
+
+[Property object](property.md) representing the variable font axis.
+
+#### Examples
+
+```javascript
+// Create a comp
+var comp = app.project.items.addComp("Create Axis Comp", 1920, 1080, 1, 30, 30);
+comp.openInViewer();
+
+// Create a text layer
+var textLayer = comp.layers.addText("Hello World!");
+
+// Set the font to variable font
+var textDocument = textLayer.property("Source Text").value;
+textDocument.font = 'ShantellSans'; // Must be a variable font
+textLayer.property("Source Text").setValue(textDocument);
+
+// Get the text property and animators group
+var textProp = textLayer.property("Text");
+var animators = textProp.property("Animators");
+
+// Add a new animator
+var animator = animators.addProperty("ADBE Text Animator");
+var animatorProps = animator.property("ADBE Text Animator Properties");
+
+// Add the Weight axis
+var axisProp = animatorProps.addVariableFontAxis("wght");
+
+// Set a static value
+axisProp.setValue(700);
+
+// Set keyframes
+axisProp.setValueAtTime(0, 300);  // Light at 0 seconds
+axisProp.setValueAtTime(2, 900);  // Heavy at 2 seconds
+```
+
+---
+
 ### PropertyGroup.property()
 
 `app.project.item(index).layer(index).propertyGroupSpec.property(index)`

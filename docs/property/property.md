@@ -460,6 +460,38 @@ Integer; read-only.
 
 ---
 
+### Property.propertyParameters
+
+`app.project.item(index).layer(index).propertySpec.propertyParameters`
+
+!!! note
+    This functionality was added in After Effects (Beta) 26.0 and is subject to change while it remains in Beta.
+
+#### Description
+
+An array of all item strings in a dropdown menu property. This attribute applies to dropdown menu properties of effects and layers, including custom strings in the Menu property of the Dropdown Menu Control.
+
+This property corresponds to [Property.setPropertyParameters()](#propertysetpropertyparameters), acting as the getter for the strings in a dropdown menu.
+
+#### Examples
+
+```javascript
+// Get all options from a Dropdown Menu Control
+var comp = app.project.activeItem;
+if (comp && comp.selectedLayers.length > 0) {
+    var lyr = comp.selectedLayers[0];
+    var fx = lyr.property("ADBE Effect Parade").property("Dropdown Menu Control");
+    var menuProp = fx.property("Menu");
+    var options = menuProp.propertyParameters; // Array of strings
+}
+```
+
+#### Type
+
+Array of strings; read-only.
+
+---
+
 ### Property.propertyValueType
 
 `app.project.item(index).layer(index).propertySpec.propertyValueType`
@@ -573,6 +605,36 @@ The type of value returned depends on the property value type. See [examples for
 #### Type
 
 A value appropriate for the type of the property (see [Property.propertyValueType](#propertypropertyvaluetype)); read-only.
+
+---
+
+### Property.valueText
+
+`app.project.item(index).layer(index).propertySpec.valueText`
+
+!!! note
+    This functionality was added in After Effects (Beta) 26.0 and is subject to change while it remains in Beta.
+
+#### Description
+
+The text string of the currently-selected item in a dropdown menu property. This attribute applies to dropdown menu properties of effects and layers, including custom strings in the Menu property of Dropdown Menu Controls.
+
+#### Examples
+
+```javascript
+// Get the currently-selected text string from a Dropdown Menu Control
+var comp = app.project.activeItem;
+if (comp && comp.selectedLayers.length > 0) {
+    var lyr = comp.selectedLayers[0];
+    var fx = lyr.property("ADBE Effect Parade").property("Dropdown Menu Control");
+    var menuProp = fx.property("Menu");
+    var selectedText = menuProp.valueText; // e.g., "Sunday"
+}
+```
+
+#### Type
+
+String; read-only.
 
 ---
 

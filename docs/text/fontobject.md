@@ -20,24 +20,46 @@ Most of these APIs simply return information which is contained in the Font data
 #### Description
 
 Returns an Array of Objects, containing the design axes data from the font.
-Each object is composed of the axis `name`, `tag`, `min` value and `max` value.
+Each object is composed of the axis `name`, `tag`, `min` value, `max` value, and `default` value.
 
 !!! tip
     Will return undefined for non-variable fonts.
 
 #### Example
 
-This example will select the first returned Font Family Array.
+This example demonstrates how to see the axes of a variable font on a selected Text layer:
 
 ```javascript
-// Getting the first available Variable Font on the system
-var firstVariableFont = fontsWithDefaultDesignAxes[0];
-var axesData = firstVariableFont.designAxesData;
+// Prerequisite: Create and select a Text layer that uses a variable font
+var textLayer = app.project.activeItem.selectedLayers[0];
 
-// Getting the first design axis for that Font
-var firstAxis = axesData[0];
+// Get the font object
+var textDocument = textLayer.property("Source Text").value;
+var fontObject = textDocument.fontObject;
 
-alert(firstAxis.name+"\n"+firstAxis.tag+"\n"+firstAxis.min+"\n"+firstAxis.max);
+// Check for axes and display any that are found
+if (fontObject && fontObject.designAxesData) {
+    var axes = fontObject.designAxesData;
+    var message = "Variable Font Axes (" + axes.length + " total):\n\n";
+    
+    for (var i = 0; i < axes.length; i++) {
+        var axis = axes[i];
+        message += "Axis " + (i + 1) + ":\n";
+        message += "  Tag: " + axis.tag + "\n";
+        message += "  Name: " + axis.name + "\n";
+        message += "  Min: " + axis.min + "\n";
+        message += "  Max: " + axis.max + "\n";
+        message += "  Default: " + axis.default + "\n";
+        
+        if (i < axes.length - 1) {
+            message += "\n";
+        }
+    }
+    
+    alert(message);
+} else {
+    alert("No variable font axes found");
+}
 ```
 
 #### Type
