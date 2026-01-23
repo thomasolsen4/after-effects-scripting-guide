@@ -70,9 +70,9 @@ Integer; read-only.
 
 ---
 
-### RenderQueueItem.onstatus
+### RenderQueueItem.onStatusChanged
 
-`app.project.renderQueue.item(index).onstatus`
+`app.project.renderQueue.item(index).onStatusChanged`
 
 #### Description
 
@@ -91,7 +91,7 @@ function myStatusChanged() {
     alert(app.project.renderQueue.item(1).status);
 }
 
-app.project.renderQueue.item(1).onstatus = myStatusChanged();
+app.project.renderQueue.item(1).onStatusChanged = myStatusChanged;
 app.project.renderQueue.item(1).render = false; // changes status and shows dialog
 ```
 
