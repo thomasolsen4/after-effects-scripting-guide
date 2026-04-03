@@ -1172,6 +1172,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layer/parametricmeshlayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ParametricMeshLayer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3040,6 +3068,19 @@
 	<a href="#layer-threedmodellayer" class="md-nav__link">
 		<span class="md-ellipsis">
 			5.8 ThreeDModelLayer
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#layer-parametricmeshlayer" class="md-nav__link">
+		<span class="md-ellipsis">
+			5.9 ParametricMeshLayer
 		</span>
 	</a>
 
@@ -9843,20 +9884,48 @@ By default, this is the same as the duration of the containing <a href="#item-co
 <h4 id="layer-layercollection-returns_9">Returns<a class="headerlink" href="#layer-layercollection-returns_9" title="Permanent link">&para;</a></h4>
 <p><a href="#layer-textlayer">TextLayer object</a>.</p>
 <hr />
+<p>LayerCollection.addParametricMesh()</p>
+<p><code>app.project.item(index).layers.addParametricMesh(meshType)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 26.3</p>
+</div>
+<h4 id="layer-layercollection-description_11">Description<a class="headerlink" href="#layer-layercollection-description_11" title="Permanent link">&para;</a></h4>
+<p>Creates a new parametric 3D mesh layer.</p>
+<h4 id="layer-layercollection-parameters_10">Parameters<a class="headerlink" href="#layer-layercollection-parameters_10" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>meshType</code></td>
+<td>MeshType</td>
+<td><a href="#layer-parametricmeshlayer-parametricmeshlayermeshtype">MeshType</a> of the new layer.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="layer-layercollection-returns_10">Returns<a class="headerlink" href="#layer-layercollection-returns_10" title="Permanent link">&para;</a></h4>
+<p><a href="#layer-parametricmeshlayer">ParametricMeshLayer object</a>.</p>
+<hr />
 <h3 id="layer-layercollection-layercollectionbyname">LayerCollection.byName()<a class="headerlink" href="#layer-layercollection-layercollectionbyname" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layers.byName(name)</code></p>
-<h4 id="layer-layercollection-description_11">Description<a class="headerlink" href="#layer-layercollection-description_11" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layercollection-description_12">Description<a class="headerlink" href="#layer-layercollection-description_12" title="Permanent link">&para;</a></h4>
 <p>Returns the first (topmost) layer found in this collection with the specified name, or <code>null</code> if no layer with the given name is found.</p>
-<h4 id="layer-layercollection-parameters_10">Parameters<a class="headerlink" href="#layer-layercollection-parameters_10" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layercollection-parameters_11">Parameters<a class="headerlink" href="#layer-layercollection-parameters_11" title="Permanent link">&para;</a></h4>
 <p>| <code>name</code> | A string containing the name. |</p>
-<h4 id="layer-layercollection-returns_10">Returns<a class="headerlink" href="#layer-layercollection-returns_10" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layercollection-returns_11">Returns<a class="headerlink" href="#layer-layercollection-returns_11" title="Permanent link">&para;</a></h4>
 <p><a href="#layer-layer">Layer object</a> or <code>null</code>.</p>
 <hr />
 <h3 id="layer-layercollection-layercollectionprecompose">LayerCollection.precompose()<a class="headerlink" href="#layer-layercollection-layercollectionprecompose" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layers.precompose(layerIndicies, name[, moveAllAttributes])</code></p>
-<h4 id="layer-layercollection-description_12">Description<a class="headerlink" href="#layer-layercollection-description_12" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layercollection-description_13">Description<a class="headerlink" href="#layer-layercollection-description_13" title="Permanent link">&para;</a></h4>
 <p>Creates a new <a href="#item-compitem">CompItem object</a> and moves the specified layers into its layer collection. It removes the individual layers from this collection, and adds the new CompItem to this collection.</p>
-<h4 id="layer-layercollection-parameters_11">Parameters<a class="headerlink" href="#layer-layercollection-parameters_11" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layercollection-parameters_12">Parameters<a class="headerlink" href="#layer-layercollection-parameters_12" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -9883,7 +9952,7 @@ By default, this is the same as the duration of the containing <a href="#item-co
 </tr>
 </tbody>
 </table>
-<h4 id="layer-layercollection-returns_11">Returns<a class="headerlink" href="#layer-layercollection-returns_11" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layercollection-returns_12">Returns<a class="headerlink" href="#layer-layercollection-returns_12" title="Permanent link">&para;</a></h4>
 <p><a href="#item-compitem">CompItem object</a>.</p></section><section class="print-page" id="layer-avlayer" heading-number="5.3"><h1 id="layer-avlayer-avlayer-object">AVLayer object<a class="headerlink" href="#layer-avlayer-avlayer-object" title="Permanent link">&para;</a></h1>
 <p><code>app.project.item(index).layer(index)</code></p>
 <h4 id="layer-avlayer-description">Description<a class="headerlink" href="#layer-avlayer-description" title="Permanent link">&para;</a></h4>
@@ -10843,7 +10912,136 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 </span><span id="__span-0-3"><span class="p">{</span>
 </span><span id="__span-0-4"><span class="w">    </span><span class="c1">// do something</span>
 </span><span id="__span-0-5"><span class="p">}</span>
-</span></code></pre></div></section></section>
+</span></code></pre></div></section><section class="print-page" id="layer-parametricmeshlayer" heading-number="5.9"><h1 id="layer-parametricmeshlayer-parametricmeshlayer-object">ParametricMeshLayer object<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayer-object" title="Permanent link">&para;</a></h1>
+<p><code>app.project.item(index).layer(index)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 26.3</p>
+</div>
+<h4 id="layer-parametricmeshlayer-description">Description<a class="headerlink" href="#layer-parametricmeshlayer-description" title="Permanent link">&para;</a></h4>
+<p>The ParametricMeshLayer object represents a Parametric Mesh layer within a composition.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>ParametricMeshLayer is a subclass of <a href="#layer-avlayer">AVLayer object</a>. All methods and attributes of AVLayer are available when working with ParametricMeshLayer.</p>
+</div>
+<h4 id="layer-parametricmeshlayer-example">Example<a class="headerlink" href="#layer-parametricmeshlayer-example" title="Permanent link">&para;</a></h4>
+<p>If the first item in the project is a CompItem, and the first layer of that CompItem is a ParametricMeshLayer, the following checks its type.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">var</span><span class="w"> </span><span class="nx">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-0-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">layer</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">ParametricMeshLayer</span><span class="p">)</span>
+</span><span id="__span-0-3"><span class="p">{</span>
+</span><span id="__span-0-4"><span class="w">    </span><span class="c1">// do something</span>
+</span><span id="__span-0-5"><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="layer-parametricmeshlayer-attributes">Attributes<a class="headerlink" href="#layer-parametricmeshlayer-attributes" title="Permanent link">&para;</a></h2>
+<h3 id="layer-parametricmeshlayer-parametricmeshlayermeshtype">ParametricMeshLayer.meshType<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayermeshtype" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).meshType</code></p>
+<h4 id="layer-parametricmeshlayer-description_1">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_1" title="Permanent link">&para;</a></h4>
+<p>For a parametric mesh layer, its mesh type. Trying to set this attribute for a non-parametric mesh layer produces an error.</p>
+<h4 id="layer-parametricmeshlayer-type">Type<a class="headerlink" href="#layer-parametricmeshlayer-type" title="Permanent link">&para;</a></h4>
+<p>A <code>MeshType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>MeshType.SPHERE</code></li>
+<li><code>MeshType.PLANE</code></li>
+<li><code>MeshType.CYLINDER</code></li>
+<li><code>MeshType.CONE</code></li>
+<li><code>MeshType.TORUS</code></li>
+<li><code>MeshType.CUBE</code></li>
+</ul>
+<hr />
+<h3 id="layer-parametricmeshlayer-parametricmeshlayermeshoptions">ParametricMeshLayer.MeshOptions<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayermeshoptions" title="Permanent link">&para;</a></h3>
+<p><code>comp.layer(index).meshOptions</code></p>
+<h4 id="layer-parametricmeshlayer-description_2">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_2" title="Permanent link">&para;</a></h4>
+<p>Gets/sets details about the structure of the parametric mesh.</p>
+<h4 id="layer-parametricmeshlayer-type_1">Type<a class="headerlink" href="#layer-parametricmeshlayer-type_1" title="Permanent link">&para;</a></h4>
+<p><code>MeshOptions</code> based on the MeshType of the layer, as follows.</p>
+<h4 id="layer-parametricmeshlayer-for-meshtypecube">For MeshType.CUBE<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypecube" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>MeshOptions.width</code></li>
+<li><code>MeshOptions.height</code></li>
+<li><code>MeshOptions.depth</code></li>
+<li><code>MeshOptions.smoothingAngle</code></li>
+</ul>
+<h4 id="layer-parametricmeshlayer-for-meshtypesphere">For MeshType.SPHERE<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypesphere" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>MeshOptions.radius</code></li>
+<li><code>MeshOptions.sides</code></li>
+<li><code>MeshOptions.sliceCaps</code></li>
+<li><code>MeshOptions.sliceStart</code></li>
+<li><code>MeshOptions.sliceEnd</code></li>
+<li><code>MeshOptions.smoothingAngle</code></li>
+</ul>
+<h4 id="layer-parametricmeshlayer-for-meshtypeplane">For MeshType.PLANE<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypeplane" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>MeshOptions.width</code></li>
+<li><code>MeshOptions.length</code></li>
+<li><code>MeshOptions.cornerRadius</code></li>
+<li><code>MeshOptions.cornerSides</code></li>
+</ul>
+<h4 id="layer-parametricmeshlayer-for-meshtypetorus">For Meshtype.TORUS<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypetorus" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>MeshOptions.ringRadius</code></li>
+<li><code>MeshOptions.pipeRadius</code></li>
+<li><code>MeshOptions.ringSides</code></li>
+<li><code>MeshOptions.pipeSides</code></li>
+<li><code>MeshOptions.caps</code></li>
+<li><code>MeshOptions.sliceStart</code></li>
+<li><code>MeshOptions.sliceEnd</code></li>
+<li><code>MeshOptions.smoothingAngle</code></li>
+</ul>
+<h4 id="layer-parametricmeshlayer-for-meshtypecone">For MeshType.CONE<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypecone" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>MeshOptions.topRadius</code></li>
+<li><code>MeshOptions.bottomRadius</code></li>
+<li><code>MeshOptions.height</code></li>
+<li><code>MeshOptions.sides</code></li>
+<li><code>MeshOptions.topCap</code></li>
+<li><code>MeshOptions.bottomCap</code></li>
+<li><code>MeshOptions.sliceCaps</code></li>
+<li><code>MeshOptions.sliceStart</code></li>
+<li><code>MeshOptions.sliceEnd</code></li>
+<li><code>MeshOptions.smoothingAngle</code></li>
+</ul>
+<h4 id="layer-parametricmeshlayer-for-meshtypecylinder">For MeshType.CYLINDER<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypecylinder" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>MeshOptions.radius</code></li>
+<li><code>MeshOptions.height</code></li>
+<li><code>MeshOptions.sides</code></li>
+<li><code>MeshOptions.topCap</code></li>
+<li><code>MeshOptions.bottomCap</code></li>
+<li><code>MeshOptions.sliceCaps</code></li>
+<li><code>MeshOptions.sliceStart</code></li>
+<li><code>MeshOptions.sliceEnd</code></li>
+<li><code>MeshOptions.smoothingAngle</code></li>
+</ul>
+<hr />
+<h4 id="layer-parametricmeshlayer-parametricmeshlayerbeveloptions">ParametricMeshLayer.BevelOptions<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayerbeveloptions" title="Permanent link">&para;</a></h4>
+<p><code>comp.layer(index).bevelOptions</code></p>
+<h4 id="layer-parametricmeshlayer-description_3">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_3" title="Permanent link">&para;</a></h4>
+<p>Gets/sets details about the beveling of the parametric mesh.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Only Parametric Mesh Layers with <code>MeshType.CUBE</code>, <code>MeshType.CONE</code>, and <code>MeshType.CYLINDER</code> have <code>BevelOptions</code>.</p>
+</div>
+<h4 id="layer-parametricmeshlayer-type_2">Type<a class="headerlink" href="#layer-parametricmeshlayer-type_2" title="Permanent link">&para;</a></h4>
+<p><code>BevelOptions</code> based on the MeshType of the layer, as follows.</p>
+<h4 id="layer-parametricmeshlayer-for-meshtypecube_1">For MeshType.CUBE<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypecube_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>bevelOptions.radius</code></li>
+<li><code>bevelOptions.sides</code></li>
+</ul>
+<h4 id="layer-parametricmeshlayer-for-meshtypecone_1">For MeshType.CONE<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypecone_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>bevelOptions.topRadius</code></li>
+<li><code>bevelOptions.topSides</code></li>
+<li><code>bevelOptions.bottomRadius</code></li>
+<li><code>bevelOptions.bottomSides</code></li>
+</ul>
+<h4 id="layer-parametricmeshlayer-for-meshtypecylinder_1">For MeshType.CYLINDER<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypecylinder_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>bevelOptions.radius</code></li>
+<li><code>bevelOptions.sides</code></li>
+</ul>
+<hr /></section></section>
                     <section class='print-page md-section' id='section-6' heading-number='6'>
                         <h1>Property<a class='headerlink' href='#section-6' title='Permanent link'></a>
                         </h1>
@@ -23050,6 +23248,11 @@ Calling this method will set the <a href="#other-viewer-vieweractive">viewer's a
 
                 .print-site-enumerate-headings #layer-threedmodellayer h2:before { content: '5.8.' counter(counter-layer-threedmodellayer-2) ' ' }
                 .print-site-enumerate-headings #layer-threedmodellayer h2 {  counter-increment: counter-layer-threedmodellayer-2 }
+            
+.print-site-enumerate-headings #layer-parametricmeshlayer > h1:before { content: '5.9 ' }
+
+                .print-site-enumerate-headings #layer-parametricmeshlayer h2:before { content: '5.9.' counter(counter-layer-parametricmeshlayer-2) ' ' }
+                .print-site-enumerate-headings #layer-parametricmeshlayer h2 {  counter-increment: counter-layer-parametricmeshlayer-2 }
             
 .print-site-enumerate-headings #section-6 > h1:before { content: '6 ' }
 .print-site-enumerate-headings #property-property > h1:before { content: '6.1 ' }
