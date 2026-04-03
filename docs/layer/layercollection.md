@@ -259,6 +259,29 @@ Creates a new point text layer with [TextDocument.lineOrientation](../text/textd
 
 ---
 
+LayerCollection.addParametricMesh()
+
+`app.project.item(index).layers.addParametricMesh(meshType)`
+
+!!! note
+    This functionality was added in After Effects 26.3
+
+#### Description
+
+Creates a new parametric 3D mesh layer.
+
+#### Parameters
+
+|  Parameter   |  Type    |                                                                 Description                                                                  |
+| ------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `meshType`   | MeshType | [MeshType](parametricmeshlayer.md#parametricmeshlayermeshtype) of the new layer. |
+
+#### Returns
+
+[ParametricMeshLayer object](parametricmeshlayer.md).
+
+---
+
 ### LayerCollection.byName()
 
 `app.project.item(index).layers.byName(name)`
