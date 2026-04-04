@@ -4321,7 +4321,17 @@
 <p>What's new and changed for scripting?</p>
 <hr />
 <h2 id="introduction-changelog-after-effects-26">After Effects 26<a class="headerlink" href="#introduction-changelog-after-effects-26" title="Permanent link">&para;</a></h2>
-<h3 id="introduction-changelog-after-effects-260-january-2026"><a href="https://helpx.adobe.com/after-effects/using/whats-new.html">After Effects 26.0</a> (January 2026)<a class="headerlink" href="#introduction-changelog-after-effects-260-january-2026" title="Permanent link">&para;</a></h3>
+<h3 id="introduction-changelog-after-effects-263-june-2026"><a href="https://helpx.adobe.com/after-effects/using/whats-new.html">After Effects 26.3</a> (June 2026)<a class="headerlink" href="#introduction-changelog-after-effects-263-june-2026" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Scripting methods and attributes added:<ul>
+<li>Added: <a href="#layer-layercollection-layercollectionaddparametricmesh">LayerCollection.addParametricMesh()</a></li>
+<li>Added: <a href="#layer-parametricmeshlayer">ParametricMeshLayer object</a></li>
+<li>Added: <a href="#layer-parametricmeshlayer-parametricmeshlayermeshoptions">ParametricMeshLayer.MeshOptions</a></li>
+<li>Added: <a href="#layer-parametricmeshlayer-parametricmeshlayerbeveloptions">ParametricMeshLayer.BevelOptions</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="introduction-changelog-after-effects-260-january-2026"><a href="https://helpx.adobe.com/after-effects/using/2026.html">After Effects 26.0</a> (January 2026)<a class="headerlink" href="#introduction-changelog-after-effects-260-january-2026" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Scripting methods and attributes added:<ul>
 <li>Added: <a href="#property-propertygroup-propertygroupaddvariablefontaxis">PropertyGroup.addVariableFontAxis()</a></li>
@@ -9884,11 +9894,11 @@ By default, this is the same as the duration of the containing <a href="#item-co
 <h4 id="layer-layercollection-returns_9">Returns<a class="headerlink" href="#layer-layercollection-returns_9" title="Permanent link">&para;</a></h4>
 <p><a href="#layer-textlayer">TextLayer object</a>.</p>
 <hr />
-<p>LayerCollection.addParametricMesh()</p>
+<h3 id="layer-layercollection-layercollectionaddparametricmesh">LayerCollection.addParametricMesh()<a class="headerlink" href="#layer-layercollection-layercollectionaddparametricmesh" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layers.addParametricMesh(meshType)</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This functionality was added in After Effects 26.3</p>
+<p>This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.</p>
 </div>
 <h4 id="layer-layercollection-description_11">Description<a class="headerlink" href="#layer-layercollection-description_11" title="Permanent link">&para;</a></h4>
 <p>Creates a new parametric 3D mesh layer.</p>
@@ -9904,8 +9914,8 @@ By default, this is the same as the duration of the containing <a href="#item-co
 <tbody>
 <tr>
 <td><code>meshType</code></td>
-<td>MeshType</td>
-<td><a href="#layer-parametricmeshlayer-parametricmeshlayermeshtype">MeshType</a> of the new layer.</td>
+<td><a href="#layer-parametricmeshlayer-parametricmeshlayermeshtype">MeshType</a></td>
+<td>The mesh type of the new layer.</td>
 </tr>
 </tbody>
 </table>
@@ -10916,7 +10926,7 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <p><code>app.project.item(index).layer(index)</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This functionality was added in After Effects 26.3</p>
+<p>This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.</p>
 </div>
 <h4 id="layer-parametricmeshlayer-description">Description<a class="headerlink" href="#layer-parametricmeshlayer-description" title="Permanent link">&para;</a></h4>
 <p>The ParametricMeshLayer object represents a Parametric Mesh layer within a composition.</p>
@@ -10935,6 +10945,10 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <h2 id="layer-parametricmeshlayer-attributes">Attributes<a class="headerlink" href="#layer-parametricmeshlayer-attributes" title="Permanent link">&para;</a></h2>
 <h3 id="layer-parametricmeshlayer-parametricmeshlayermeshtype">ParametricMeshLayer.meshType<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayermeshtype" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).meshType</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.</p>
+</div>
 <h4 id="layer-parametricmeshlayer-description_1">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_1" title="Permanent link">&para;</a></h4>
 <p>For a parametric mesh layer, its mesh type. Trying to set this attribute for a non-parametric mesh layer produces an error.</p>
 <h4 id="layer-parametricmeshlayer-type">Type<a class="headerlink" href="#layer-parametricmeshlayer-type" title="Permanent link">&para;</a></h4>
@@ -10948,79 +10962,87 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <li><code>MeshType.CUBE</code></li>
 </ul>
 <hr />
-<h3 id="layer-parametricmeshlayer-parametricmeshlayermeshoptions">ParametricMeshLayer.MeshOptions<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayermeshoptions" title="Permanent link">&para;</a></h3>
-<p><code>comp.layer(index).meshOptions</code></p>
+<h3 id="layer-parametricmeshlayer-parametricmeshlayermeshoptions">ParametricMeshLayer.meshOptions<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayermeshoptions" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).meshOptions</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.</p>
+</div>
 <h4 id="layer-parametricmeshlayer-description_2">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_2" title="Permanent link">&para;</a></h4>
 <p>Gets/sets details about the structure of the parametric mesh.</p>
 <h4 id="layer-parametricmeshlayer-type_1">Type<a class="headerlink" href="#layer-parametricmeshlayer-type_1" title="Permanent link">&para;</a></h4>
 <p><code>MeshOptions</code> based on the MeshType of the layer, as follows.</p>
 <h4 id="layer-parametricmeshlayer-for-meshtypecube">For MeshType.CUBE<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypecube" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.width</code></li>
-<li><code>MeshOptions.height</code></li>
-<li><code>MeshOptions.depth</code></li>
-<li><code>MeshOptions.smoothingAngle</code></li>
+<li><code>meshOptions.width</code></li>
+<li><code>meshOptions.height</code></li>
+<li><code>meshOptions.depth</code></li>
+<li><code>meshOptions.smoothingAngle</code></li>
 </ul>
 <h4 id="layer-parametricmeshlayer-for-meshtypesphere">For MeshType.SPHERE<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypesphere" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.radius</code></li>
-<li><code>MeshOptions.sides</code></li>
-<li><code>MeshOptions.sliceCaps</code></li>
-<li><code>MeshOptions.sliceStart</code></li>
-<li><code>MeshOptions.sliceEnd</code></li>
-<li><code>MeshOptions.smoothingAngle</code></li>
+<li><code>meshOptions.radius</code></li>
+<li><code>meshOptions.sides</code></li>
+<li><code>meshOptions.sliceCaps</code></li>
+<li><code>meshOptions.sliceStart</code></li>
+<li><code>meshOptions.sliceEnd</code></li>
+<li><code>meshOptions.smoothingAngle</code></li>
 </ul>
 <h4 id="layer-parametricmeshlayer-for-meshtypeplane">For MeshType.PLANE<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypeplane" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.width</code></li>
-<li><code>MeshOptions.length</code></li>
-<li><code>MeshOptions.cornerRadius</code></li>
-<li><code>MeshOptions.cornerSides</code></li>
+<li><code>meshOptions.width</code></li>
+<li><code>meshOptions.length</code></li>
+<li><code>meshOptions.cornerRadius</code></li>
+<li><code>meshOptions.cornerSides</code></li>
 </ul>
 <h4 id="layer-parametricmeshlayer-for-meshtypetorus">For Meshtype.TORUS<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypetorus" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.ringRadius</code></li>
-<li><code>MeshOptions.pipeRadius</code></li>
-<li><code>MeshOptions.ringSides</code></li>
-<li><code>MeshOptions.pipeSides</code></li>
-<li><code>MeshOptions.caps</code></li>
-<li><code>MeshOptions.sliceStart</code></li>
-<li><code>MeshOptions.sliceEnd</code></li>
-<li><code>MeshOptions.smoothingAngle</code></li>
+<li><code>meshOptions.ringRadius</code></li>
+<li><code>meshOptions.pipeRadius</code></li>
+<li><code>meshOptions.ringSides</code></li>
+<li><code>meshOptions.pipeSides</code></li>
+<li><code>meshOptions.caps</code></li>
+<li><code>meshOptions.sliceStart</code></li>
+<li><code>meshOptions.sliceEnd</code></li>
+<li><code>meshOptions.smoothingAngle</code></li>
 </ul>
 <h4 id="layer-parametricmeshlayer-for-meshtypecone">For MeshType.CONE<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypecone" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.topRadius</code></li>
-<li><code>MeshOptions.bottomRadius</code></li>
-<li><code>MeshOptions.height</code></li>
-<li><code>MeshOptions.sides</code></li>
-<li><code>MeshOptions.topCap</code></li>
-<li><code>MeshOptions.bottomCap</code></li>
-<li><code>MeshOptions.sliceCaps</code></li>
-<li><code>MeshOptions.sliceStart</code></li>
-<li><code>MeshOptions.sliceEnd</code></li>
-<li><code>MeshOptions.smoothingAngle</code></li>
+<li><code>meshOptions.topRadius</code></li>
+<li><code>meshOptions.bottomRadius</code></li>
+<li><code>meshOptions.height</code></li>
+<li><code>meshOptions.sides</code></li>
+<li><code>meshOptions.topCap</code></li>
+<li><code>meshOptions.bottomCap</code></li>
+<li><code>meshOptions.sliceCaps</code></li>
+<li><code>meshOptions.sliceStart</code></li>
+<li><code>meshOptions.sliceEnd</code></li>
+<li><code>meshOptions.smoothingAngle</code></li>
 </ul>
 <h4 id="layer-parametricmeshlayer-for-meshtypecylinder">For MeshType.CYLINDER<a class="headerlink" href="#layer-parametricmeshlayer-for-meshtypecylinder" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.radius</code></li>
-<li><code>MeshOptions.height</code></li>
-<li><code>MeshOptions.sides</code></li>
-<li><code>MeshOptions.topCap</code></li>
-<li><code>MeshOptions.bottomCap</code></li>
-<li><code>MeshOptions.sliceCaps</code></li>
-<li><code>MeshOptions.sliceStart</code></li>
-<li><code>MeshOptions.sliceEnd</code></li>
-<li><code>MeshOptions.smoothingAngle</code></li>
+<li><code>meshOptions.radius</code></li>
+<li><code>meshOptions.height</code></li>
+<li><code>meshOptions.sides</code></li>
+<li><code>meshOptions.topCap</code></li>
+<li><code>meshOptions.bottomCap</code></li>
+<li><code>meshOptions.sliceCaps</code></li>
+<li><code>meshOptions.sliceStart</code></li>
+<li><code>meshOptions.sliceEnd</code></li>
+<li><code>meshOptions.smoothingAngle</code></li>
 </ul>
 <hr />
-<h4 id="layer-parametricmeshlayer-parametricmeshlayerbeveloptions">ParametricMeshLayer.BevelOptions<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayerbeveloptions" title="Permanent link">&para;</a></h4>
-<p><code>comp.layer(index).bevelOptions</code></p>
+<h3 id="layer-parametricmeshlayer-parametricmeshlayerbeveloptions">ParametricMeshLayer.bevelOptions<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayerbeveloptions" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).bevelOptions</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.</p>
+</div>
 <h4 id="layer-parametricmeshlayer-description_3">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_3" title="Permanent link">&para;</a></h4>
 <p>Gets/sets details about the beveling of the parametric mesh.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Only Parametric Mesh Layers with <code>MeshType.CUBE</code>, <code>MeshType.CONE</code>, and <code>MeshType.CYLINDER</code> have <code>BevelOptions</code>.</p>
+<p>Only Parametric Mesh Layers with <code>MeshType.CUBE</code>, <code>MeshType.CONE</code>, and <code>MeshType.CYLINDER</code> have <code>bevelOptions</code>.</p>
 </div>
 <h4 id="layer-parametricmeshlayer-type_2">Type<a class="headerlink" href="#layer-parametricmeshlayer-type_2" title="Permanent link">&para;</a></h4>
 <p><code>BevelOptions</code> based on the MeshType of the layer, as follows.</p>

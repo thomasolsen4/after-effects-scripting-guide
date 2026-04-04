@@ -1269,7 +1269,20 @@
 					<li class="md-nav__item">
 	<a href="#parametricmeshlayermeshoptions" class="md-nav__link">
 		<span class="md-ellipsis">
-			ParametricMeshLayer.MeshOptions
+			ParametricMeshLayer.meshOptions
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#parametricmeshlayerbeveloptions" class="md-nav__link">
+		<span class="md-ellipsis">
+			ParametricMeshLayer.bevelOptions
 		</span>
 	</a>
 
@@ -2826,7 +2839,20 @@
 					<li class="md-nav__item">
 	<a href="#parametricmeshlayermeshoptions" class="md-nav__link">
 		<span class="md-ellipsis">
-			ParametricMeshLayer.MeshOptions
+			ParametricMeshLayer.meshOptions
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#parametricmeshlayerbeveloptions" class="md-nav__link">
+		<span class="md-ellipsis">
+			ParametricMeshLayer.bevelOptions
 		</span>
 	</a>
 
@@ -2877,7 +2903,7 @@
 <p><code>app.project.item(index).layer(index)</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This functionality was added in After Effects 26.3</p>
+<p>This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.</p>
 </div>
 <h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
 <p>The ParametricMeshLayer object represents a Parametric Mesh layer within a composition.</p>
@@ -2896,6 +2922,10 @@
 <h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
 <h3 id="parametricmeshlayermeshtype">ParametricMeshLayer.meshType<a class="headerlink" href="#parametricmeshlayermeshtype" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).meshType</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.</p>
+</div>
 <h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
 <p>For a parametric mesh layer, its mesh type. Trying to set this attribute for a non-parametric mesh layer produces an error.</p>
 <h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
@@ -2909,79 +2939,87 @@
 <li><code>MeshType.CUBE</code></li>
 </ul>
 <hr />
-<h3 id="parametricmeshlayermeshoptions">ParametricMeshLayer.MeshOptions<a class="headerlink" href="#parametricmeshlayermeshoptions" title="Permanent link">&para;</a></h3>
-<p><code>comp.layer(index).meshOptions</code></p>
+<h3 id="parametricmeshlayermeshoptions">ParametricMeshLayer.meshOptions<a class="headerlink" href="#parametricmeshlayermeshoptions" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).meshOptions</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.</p>
+</div>
 <h4 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h4>
 <p>Gets/sets details about the structure of the parametric mesh.</p>
 <h4 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
 <p><code>MeshOptions</code> based on the MeshType of the layer, as follows.</p>
 <h4 id="for-meshtypecube">For MeshType.CUBE<a class="headerlink" href="#for-meshtypecube" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.width</code></li>
-<li><code>MeshOptions.height</code></li>
-<li><code>MeshOptions.depth</code></li>
-<li><code>MeshOptions.smoothingAngle</code></li>
+<li><code>meshOptions.width</code></li>
+<li><code>meshOptions.height</code></li>
+<li><code>meshOptions.depth</code></li>
+<li><code>meshOptions.smoothingAngle</code></li>
 </ul>
 <h4 id="for-meshtypesphere">For MeshType.SPHERE<a class="headerlink" href="#for-meshtypesphere" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.radius</code></li>
-<li><code>MeshOptions.sides</code></li>
-<li><code>MeshOptions.sliceCaps</code></li>
-<li><code>MeshOptions.sliceStart</code></li>
-<li><code>MeshOptions.sliceEnd</code></li>
-<li><code>MeshOptions.smoothingAngle</code></li>
+<li><code>meshOptions.radius</code></li>
+<li><code>meshOptions.sides</code></li>
+<li><code>meshOptions.sliceCaps</code></li>
+<li><code>meshOptions.sliceStart</code></li>
+<li><code>meshOptions.sliceEnd</code></li>
+<li><code>meshOptions.smoothingAngle</code></li>
 </ul>
 <h4 id="for-meshtypeplane">For MeshType.PLANE<a class="headerlink" href="#for-meshtypeplane" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.width</code></li>
-<li><code>MeshOptions.length</code></li>
-<li><code>MeshOptions.cornerRadius</code></li>
-<li><code>MeshOptions.cornerSides</code></li>
+<li><code>meshOptions.width</code></li>
+<li><code>meshOptions.length</code></li>
+<li><code>meshOptions.cornerRadius</code></li>
+<li><code>meshOptions.cornerSides</code></li>
 </ul>
 <h4 id="for-meshtypetorus">For Meshtype.TORUS<a class="headerlink" href="#for-meshtypetorus" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.ringRadius</code></li>
-<li><code>MeshOptions.pipeRadius</code></li>
-<li><code>MeshOptions.ringSides</code></li>
-<li><code>MeshOptions.pipeSides</code></li>
-<li><code>MeshOptions.caps</code></li>
-<li><code>MeshOptions.sliceStart</code></li>
-<li><code>MeshOptions.sliceEnd</code></li>
-<li><code>MeshOptions.smoothingAngle</code></li>
+<li><code>meshOptions.ringRadius</code></li>
+<li><code>meshOptions.pipeRadius</code></li>
+<li><code>meshOptions.ringSides</code></li>
+<li><code>meshOptions.pipeSides</code></li>
+<li><code>meshOptions.caps</code></li>
+<li><code>meshOptions.sliceStart</code></li>
+<li><code>meshOptions.sliceEnd</code></li>
+<li><code>meshOptions.smoothingAngle</code></li>
 </ul>
 <h4 id="for-meshtypecone">For MeshType.CONE<a class="headerlink" href="#for-meshtypecone" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.topRadius</code></li>
-<li><code>MeshOptions.bottomRadius</code></li>
-<li><code>MeshOptions.height</code></li>
-<li><code>MeshOptions.sides</code></li>
-<li><code>MeshOptions.topCap</code></li>
-<li><code>MeshOptions.bottomCap</code></li>
-<li><code>MeshOptions.sliceCaps</code></li>
-<li><code>MeshOptions.sliceStart</code></li>
-<li><code>MeshOptions.sliceEnd</code></li>
-<li><code>MeshOptions.smoothingAngle</code></li>
+<li><code>meshOptions.topRadius</code></li>
+<li><code>meshOptions.bottomRadius</code></li>
+<li><code>meshOptions.height</code></li>
+<li><code>meshOptions.sides</code></li>
+<li><code>meshOptions.topCap</code></li>
+<li><code>meshOptions.bottomCap</code></li>
+<li><code>meshOptions.sliceCaps</code></li>
+<li><code>meshOptions.sliceStart</code></li>
+<li><code>meshOptions.sliceEnd</code></li>
+<li><code>meshOptions.smoothingAngle</code></li>
 </ul>
 <h4 id="for-meshtypecylinder">For MeshType.CYLINDER<a class="headerlink" href="#for-meshtypecylinder" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>MeshOptions.radius</code></li>
-<li><code>MeshOptions.height</code></li>
-<li><code>MeshOptions.sides</code></li>
-<li><code>MeshOptions.topCap</code></li>
-<li><code>MeshOptions.bottomCap</code></li>
-<li><code>MeshOptions.sliceCaps</code></li>
-<li><code>MeshOptions.sliceStart</code></li>
-<li><code>MeshOptions.sliceEnd</code></li>
-<li><code>MeshOptions.smoothingAngle</code></li>
+<li><code>meshOptions.radius</code></li>
+<li><code>meshOptions.height</code></li>
+<li><code>meshOptions.sides</code></li>
+<li><code>meshOptions.topCap</code></li>
+<li><code>meshOptions.bottomCap</code></li>
+<li><code>meshOptions.sliceCaps</code></li>
+<li><code>meshOptions.sliceStart</code></li>
+<li><code>meshOptions.sliceEnd</code></li>
+<li><code>meshOptions.smoothingAngle</code></li>
 </ul>
 <hr />
-<h4 id="parametricmeshlayerbeveloptions">ParametricMeshLayer.BevelOptions<a class="headerlink" href="#parametricmeshlayerbeveloptions" title="Permanent link">&para;</a></h4>
-<p><code>comp.layer(index).bevelOptions</code></p>
+<h3 id="parametricmeshlayerbeveloptions">ParametricMeshLayer.bevelOptions<a class="headerlink" href="#parametricmeshlayerbeveloptions" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).bevelOptions</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.</p>
+</div>
 <h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
 <p>Gets/sets details about the beveling of the parametric mesh.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Only Parametric Mesh Layers with <code>MeshType.CUBE</code>, <code>MeshType.CONE</code>, and <code>MeshType.CYLINDER</code> have <code>BevelOptions</code>.</p>
+<p>Only Parametric Mesh Layers with <code>MeshType.CUBE</code>, <code>MeshType.CONE</code>, and <code>MeshType.CYLINDER</code> have <code>bevelOptions</code>.</p>
 </div>
 <h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
 <p><code>BevelOptions</code> based on the MeshType of the layer, as follows.</p>
@@ -3023,7 +3061,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 3, 2026 17:29:09 UTC">April 3, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 4, 2026 15:57:14 UTC">April 4, 2026</span>
   </span>
 
     
