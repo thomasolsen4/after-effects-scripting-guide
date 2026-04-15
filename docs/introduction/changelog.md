@@ -15,8 +15,9 @@ What's new and changed for scripting?
 - Scripting methods and attributes added:
     - Added: [LayerCollection.addParametricMesh()](../layer/layercollection.md#layercollectionaddparametricmesh)
     - Added: [ParametricMeshLayer object](../layer/parametricmeshlayer.md)
-    - Added: [ParametricMeshLayer.MeshOptions](../layer/parametricmeshlayer.md#parametricmeshlayermeshoptions)
-    - Added: [ParametricMeshLayer.BevelOptions](../layer/parametricmeshlayer.md#parametricmeshlayerbeveloptions)
+    - Added: [ParametricMeshLayer.ParametricMeshType](../layer/parametricmeshlayer.md/#parametricmeshlayerparametricmeshtype)
+    - Added: [ParametricMeshLayer.ParametricMeshOptions](../layer/parametricmeshlayer.md/#parametricmeshlayerparametricmeshoptions)
+    - Added: [ParametricMeshLayer.ParametricBevelOptions](../layer/parametricmeshlayer.md#parametricmeshlayerparametricbeveloptions)
 
 ### [After Effects 26.0](https://helpx.adobe.com/after-effects/using/2026.html) (January 2026)
 

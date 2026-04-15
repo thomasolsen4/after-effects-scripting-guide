@@ -26,9 +26,9 @@ if (layer instanceof ParametricMeshLayer)
 
 ## Attributes
 
-### ParametricMeshLayer.meshType
+### ParametricMeshLayer.parametricMeshType
 
-`app.project.item(index).layer(index).meshType`
+`app.project.item(index).layer(index).parametricMeshType`
 
 !!! note
     This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.
@@ -39,20 +39,20 @@ For a parametric mesh layer, its mesh type. Trying to set this attribute for a n
 
 #### Type
 
-A `MeshType` enumerated value; read/write. One of:
+A `ParametricMeshType` enumerated value; read/write. One of:
 
-- `MeshType.SPHERE`
-- `MeshType.PLANE`
-- `MeshType.CYLINDER`
-- `MeshType.CONE`
-- `MeshType.TORUS`
-- `MeshType.CUBE`
+- `ParametricMeshType.SPHERE`
+- `ParametricMeshType.PLANE`
+- `ParametricMeshType.CYLINDER`
+- `ParametricMeshType.CONE`
+- `ParametricMeshType.TORUS`
+- `ParametricMeshType.CUBE`
 
 ---
 
-### ParametricMeshLayer.meshOptions
+### ParametricMeshLayer.parametricMeshOptions
 
-`app.project.item(index).layer(index).meshOptions`
+`app.project.item(index).layer(index).parametricMeshOptions`
 
 !!! note
     This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.
@@ -63,66 +63,66 @@ Gets/sets details about the structure of the parametric mesh.
 
 #### Type
 
-`MeshOptions` based on the MeshType of the layer, as follows.
+`ParametricMeshOptions` based on the ParametricMeshType of the layer, as follows.
 
-#### For MeshType.CUBE
-- `meshOptions.width`
-- `meshOptions.height`
-- `meshOptions.depth`
-- `meshOptions.smoothingAngle`
+#### For ParametricMeshType.CUBE
+- `parametricMeshOptions.width`
+- `parametricMeshOptions.height`
+- `parametricMeshOptions.depth`
+- `parametricMeshOptions.smoothingAngle`
 
-#### For MeshType.SPHERE
-- `meshOptions.radius`
-- `meshOptions.sides`
-- `meshOptions.sliceCaps`
-- `meshOptions.sliceStart`
-- `meshOptions.sliceEnd`
-- `meshOptions.smoothingAngle`
+#### For ParametricMeshType.SPHERE
+- `parametricMeshOptions.radius`
+- `parametricMeshOptions.sides`
+- `parametricMeshOptions.sliceCaps`
+- `parametricMeshOptions.sliceStart`
+- `parametricMeshOptions.sliceEnd`
+- `parametricMeshOptions.smoothingAngle`
 
-#### For MeshType.PLANE
-- `meshOptions.width`
-- `meshOptions.length`
-- `meshOptions.cornerRadius`
-- `meshOptions.cornerSides`
+#### For ParametricMeshType.PLANE
+- `parametricMeshOptions.width`
+- `parametricMeshOptions.length`
+- `parametricMeshOptions.cornerRadius`
+- `parametricMeshOptions.cornerSides`
 
-####  For Meshtype.TORUS
-- `meshOptions.ringRadius`
-- `meshOptions.pipeRadius`
-- `meshOptions.ringSides`
-- `meshOptions.pipeSides`
-- `meshOptions.caps`
-- `meshOptions.sliceStart`
-- `meshOptions.sliceEnd`
-- `meshOptions.smoothingAngle`
+#### For ParametricMeshType.TORUS
+- `parametricMeshOptions.ringRadius`
+- `parametricMeshOptions.pipeRadius`
+- `parametricMeshOptions.ringSides`
+- `parametricMeshOptions.pipeSides`
+- `parametricMeshOptions.caps`
+- `parametricMeshOptions.sliceStart`
+- `parametricMeshOptions.sliceEnd`
+- `parametricMeshOptions.smoothingAngle`
 
-####  For MeshType.CONE
-- `meshOptions.topRadius`
-- `meshOptions.bottomRadius`
-- `meshOptions.height`
-- `meshOptions.sides`
-- `meshOptions.topCap`
-- `meshOptions.bottomCap`
-- `meshOptions.sliceCaps`
-- `meshOptions.sliceStart`
-- `meshOptions.sliceEnd`
-- `meshOptions.smoothingAngle`
+#### For ParametricMeshType.CONE
+- `parametricMeshOptions.topRadius`
+- `parametricMeshOptions.bottomRadius`
+- `parametricMeshOptions.height`
+- `parametricMeshOptions.sides`
+- `parametricMeshOptions.topCap`
+- `parametricMeshOptions.bottomCap`
+- `parametricMeshOptions.sliceCaps`
+- `parametricMeshOptions.sliceStart`
+- `parametricMeshOptions.sliceEnd`
+- `parametricMeshOptions.smoothingAngle`
 
-#### For MeshType.CYLINDER
-- `meshOptions.radius`
-- `meshOptions.height`
-- `meshOptions.sides`
-- `meshOptions.topCap`
-- `meshOptions.bottomCap`
-- `meshOptions.sliceCaps`
-- `meshOptions.sliceStart`
-- `meshOptions.sliceEnd`
-- `meshOptions.smoothingAngle`
+#### For ParametricMeshType.CYLINDER
+- `parametricMeshOptions.radius`
+- `parametricMeshOptions.height`
+- `parametricMeshOptions.sides`
+- `parametricMeshOptions.topCap`
+- `parametricMeshOptions.bottomCap`
+- `parametricMeshOptions.sliceCaps`
+- `parametricMeshOptions.sliceStart`
+- `parametricMeshOptions.sliceEnd`
+- `parametricMeshOptions.smoothingAngle`
 
 ---
 
-### ParametricMeshLayer.bevelOptions
+### ParametricMeshLayer.parametricBevelOptions
 
-`app.project.item(index).layer(index).bevelOptions`
+`app.project.item(index).layer(index).parametricBevelOptions`
 
 !!! note
     This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.
@@ -132,25 +132,25 @@ Gets/sets details about the structure of the parametric mesh.
 Gets/sets details about the beveling of the parametric mesh.
 
 !!! info
-	Only Parametric Mesh Layers with `MeshType.CUBE`, `MeshType.CONE`, and `MeshType.CYLINDER` have `bevelOptions`.
+	Only Parametric Mesh Layers with `ParametricMeshType.CUBE`, `ParametricMeshType.CONE`, and `ParametricMeshType.CYLINDER` have `parametricBevelOptions`.
 
 #### Type
 
-`BevelOptions` based on the MeshType of the layer, as follows.
+`ParametricBevelOptions` based on the ParametricMeshType of the layer, as follows.
 
-#### For MeshType.CUBE
-- `bevelOptions.radius`
-- `bevelOptions.sides`
+#### For ParametricMeshType.CUBE
+- `parametricBevelOptions.radius`
+- `parametricBevelOptions.sides`
 
-#### For MeshType.CONE
-- `bevelOptions.topRadius`
-- `bevelOptions.topSides`
-- `bevelOptions.bottomRadius`
-- `bevelOptions.bottomSides`
+#### For ParametricMeshType.CONE
+- `parametricBevelOptions.topRadius`
+- `parametricBevelOptions.topSides`
+- `parametricBevelOptions.bottomRadius`
+- `parametricBevelOptions.bottomSides`
 
-#### For MeshType.CYLINDER
-- `bevelOptions.radius`
-- `bevelOptions.sides`
+#### For ParametricMeshType.CYLINDER
+- `parametricBevelOptions.radius`
+- `parametricBevelOptions.sides`
 
 ---
 
